@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+	 <link rel="shortcut icon" href="favicon.ico" />
+
+	<style>
+		.scroll-down, .scroll-down:active, .scroll-down:focus, .scroll-down:hover, .scroll-down:visited, a, a:active, a:focus, a:hover, a:visited{
+    text-decoration: none;
+	}
+
+	.scroll-down {
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -75px;
+    z-index: 50;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+}
+	
+	.btn, .scroll-down {
+    white-space: nowrap;
+}	
+a {
+    color: #337ab7;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.scroll-down .icon:before, .scroll-down span {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.scroll-down .icon:before {
+    transition: all .3s ease;
+    width: 6px;
+    height: 6px;
+    -webkit-animation: scrollDownKnobAnimation 2s ease infinite;
+    -moz-animation: scrollDownKnobAnimation 2s ease infinite;
+    -o-animation: scrollDownKnobAnimation 2s ease infinite;
+    animation: scrollDownKnobAnimation 2s ease infinite;
+    position: absolute;
+    top: 6px;
+    border-radius: 50%;
+    background-color: #b3b3b3;
+    content: '';
+    left: 50%;
+    margin-left: -3px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ 	.search
+{
+	border: 2px solid #CF5C3F;
+	overflow: auto;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Roboto:wght@300&display=swap');
+
+body {
+    background: #eee;
+    font-family: 'Roboto', sans-serif
+}
+
+.crop-text {
+    -webkit-line-clamp: 2 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical
+}
+
+.cmpny-name {
+    color: blue;
+    font-weight: 600
+}
+
+.dots {
+    height: 6px;
+    width: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 1px;
+    background-color: rgb(180, 181, 180);
+    border-radius: 50%;
+    display: inline-block
+}
+
+.num-reviews {
+    font-weight: 600;
+    font-size: 13px
+}
+
+.ratings {
+    color: blue;
+    margin-right: 3px
+}
+
+.rating-none {
+    color: #dad6d6
+}
+
+.excellent {
+    font-size: 13px;
+    margin-bottom: 2px
+}
+
+.get-rating {
+    font-size: 35px;
+    font-weight: 700
+}
+
+.rating-out {
+    margin-bottom: -8px
+}
+
+search input[type="submit"]
+{
+	border: 0px;
+	background: none;
+	background-color: #CF5C3F;
+	color: #fff;
+	float: right;
+	padding: 10px;
+	border-radius-top-right: 5px;
+	-moz-border-radius-top-right: 5px;
+	-webkit-border-radius-top-right: 5px;
+	border-radius-bottom-right: 5px;
+	-moz-border-radius-bottom-right: 5px;
+	-webkit-border-radius-bottom-right: 5px;
+        cursor:pointer;
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	{}
+	.search
+	{
+		width: 95%;
+		margin: 0 auto;
+	}
+
+}
+	</style>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+<body>
+
+
+
+	<video width="100%;" autoplay muted loop id="myVideo">
+  			<source src="img/intro.mp4" type="video/mp4">
+			</video>
+	<div class="search">
+				<form class="search-form">
+					<input type="text" placeholder="Search for books, authors, categories and more..">
+					<input type="submit" value="Submit">
+					<div class="gcse-search">
+				</form>
+			</div>
+
+	<a href="#" class="scroll-down">
+                    <i class="icon"></i>
+                    <span>scroll down</span>
+                </a>
+
+                <div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="align-content-center col-md-6">
+            <div class="review-card p-2 bg-white rounded">
+                <div class="text-right"><img src="https://i.imgur.com/rL9jvBE.png" width="20"></div>
+                <div class="d-flex mt-0 p-2"><img src="https://i.imgur.com/9Ba2m5C.png">
+                    <div class="ml-1 mt-2">
+                        <h6 class="crop-text mb-0">Adidas corporation is longer company in fashion, fitness and clothing&nbsp;</h6>
+                        <div class="mt-0"><span class="cmpny-name">adidas.com</span><span class="dots"></span><span class="text-black-50 num-reviews">499 Reviews</span></div>
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="square-ratings mr-2"><i class="fa fa-square ratings"></i><i class="fa fa-square ratings"></i><i class="fa fa-square ratings"></i><i class="fa fa-square ratings"></i><i class="fa fa-square rating-none"></i></div><span class="font-weight-bold text-black-50 excellent">Excellent</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 rating-box mb-3">
+                    <div class="border rounded">
+                        <div class="text-center score py-2">
+                            <div class="rating-out"><span class="get-rating">4.5</span><span class="font-weight-bold">/5</span></div>
+                            <div><span>Main Score</span></div>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center align-content-center border-top">
+                            <div class="border-right px-2 text-center py-2"><span class="d-block font-weight-bold">4.2</span><span>Reviews</span></div>
+                            <div class="text-center border-right px-2 py-2"><span class="d-block font-weight-bold">4.9</span><span>Marketing</span></div>
+                            <div class="text-center border-right px-2 py-2"><span class="d-block font-weight-bold">4.2</span><span>Social</span></div>
+                            <div class="text-center px-2 py-2"><span class="d-block font-weight-bold">4.0</span><span>Technical</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
